@@ -87,7 +87,7 @@ body:
       description: Select what scenario variation this affects 
       multiple: true
       options:
-        - Enhanced identity goveranance
+        - Enhanced identity governance
         - Micro-segmentation
         - Software defined perimeters
         - Device agent/gateway deployment
