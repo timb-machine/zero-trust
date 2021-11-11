@@ -1,0 +1,99 @@
+name: Threat
+description: File a new threat
+title: "[Threat]: "
+labels: ["new", "confirmed", "deprecated"]
+assignees:
+  - timb-machine
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to submit this threat.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Select what area of Zero Trust this affects 
+      multiple: false
+      options:
+        - Automation
+        - Visibility
+        - Identity
+        - Integration
+        - Policy
+  - type: dropdown
+    id: parent_threat
+    attributes:
+      label: Parent threat
+      description: Select what parent (NIST 800-207) threat this relates to 
+      multiple: false
+      options:
+        - Subversion of ZTA decision process
+        - Denial-of-service/Network disruption
+        - Stolen credentials/Insider threat
+        - Visibility on the network
+        - Storage of system and network information
+        - Reliance on proprietary data formats or solutions
+        - Use of non-person entities (NPE) in ZTA administration
+  - type: textarea
+    id: finding
+    attributes:
+      label: Finding
+      description: Add any URLs to public references to the threat
+      placeholder: https://...
+    validations:
+      required: false
+  - type: textarea
+    id: industry_reference
+    attributes:
+      label: Industry reference
+      description: CWE/ATT&CK etc reference
+      multiple: true
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Select what component this affects 
+      multiple: true
+      options:
+        - APIs
+        - Change of attack surface
+        - Cloud
+        - Cryptosystem
+        - Endpoint
+        - IDP
+        - Missing controls on new implementation
+        - Network
+        - People
+        - Policies
+        - SOC
+        - Server
+        - Technical debt
+  - type: dropdown
+    id: scenario
+    attributes:
+      label: Scenario
+      description: Select what scenario this affects 
+      multiple: true
+      options:
+        - Enterprise with satellite facilities
+        - Multi-cloud/Cloud-to-cloud enterprise
+        - Enterprise with contracted services and/or non-employee access
+        - Collaboration across enterprise boundaries
+        - Enterprise with public/Customer-facing services
+  - type: dropdown
+    id: scenario_variation
+    attributes:
+      label: Scenario variation
+      description: Select what scenario variation this affects 
+      multiple: true
+      options:
+        - Enhanced identity goveranance
+        - Micro-segmentation
+        - Software defined perimeters
+        - Device agent/gateway deployment
+        - Enclave deployment
+        - Resource portal-based deployment
+        - Device application sandboxing
+        - Trust algorithm
+        - Network requirements
