@@ -48,7 +48,6 @@ body:
     attributes:
       label: Industry reference
       description: CWE/ATT&CK etc reference
-      multiple: true
   - type: dropdown
     id: component
     attributes:
